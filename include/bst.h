@@ -45,15 +45,6 @@ class BST {
         }
     }
 
-    Node* printTree(Node* root, int level) {
-        if (nullptr == root) {
-            return nullptr;
-        }
-        std::cout << root->value << "  " << root->counter << std::endl;
-        printTree(root->left, level++);
-        printTree(root->right, level++);
-    }
-
  public:
     BST() {
         root = nullptr;
@@ -61,10 +52,6 @@ class BST {
 
     void add(T value) {
         root = addNode(root, value, 0);
-    }
-
-    void print() {
-        printTree(root, 0);
     }
 
     int depth() {
