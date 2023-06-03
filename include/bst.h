@@ -43,6 +43,7 @@ class BST {
         } else if (value > root->value) {
             return searchNode(root->right, value);
         }
+        return -1;
     }
 
  public:
